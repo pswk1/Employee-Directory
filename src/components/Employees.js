@@ -21,6 +21,7 @@ class Employee extends Component {
   };
 
   handleSort = e => {
+
     const type = e.target.getAttribute("name");
     if (type === "name") {
       const sorted = this.state.employees.sort((a, b) => {
@@ -81,19 +82,19 @@ class Employee extends Component {
     return (
       <React.Fragment>
         <div>
-        <p>Search by name, phone, or email</p>
+        <p>Filter by name, phone, or email:</p>
         <form className="form-inline my-2 my-lg-0">
           <input
             className="form-control mr-sm-2"
             type="text"
-            placeholder="Search"
+            placeholder="Name/Phone/Email"
             value={this.state.searchTerm}
             onChange={this.handleChange}
           ></input>
-          <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
         </form>
+        </div>
+        <div>
+          <p>Click on a category to sort by that category. Names are sorted by last name.</p>
         </div>
 
         <table className="table table-hover">
