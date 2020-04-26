@@ -4,7 +4,9 @@ The Employee Directory allows the user to view an entire fictional employee dire
 ## Installation
 To install the required dependencies, please run:
 
-`npm install`
+```
+npm install
+```
 
 ### Deployed Application
 
